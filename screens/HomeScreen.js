@@ -1,5 +1,8 @@
-import { View, Text, SafeAreaView, ScrollView } from 'react-native'
-import React from 'react'
+import { View, Text, StatusBar, Image, SafeAreaView, ScrollView } from 'react-native'
+import React, { useState, useEffect } from 'react'
+import { CalendarDaysIcon } from 'react-native-heroicons/outline'
+import { fetchWeatherForecast } from '../api/weather'
+import * as Progress from 'react-native-progress';
 
 const HomeScreen = () => {
     const [weather, setWeather] = useState({})
